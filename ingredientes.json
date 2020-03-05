@@ -1,0 +1,6 @@
+{"_id":{"$oid":"5e617518e8774bca3deac4f2"},"nombre":"Paracetamol"}
+{"_id":{"$oid":"5e618ce3f053afd16a2233a3"},"name":"Penicilina","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e618d323850a7d1a05bb127"},"name":"Benzetacil","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e618da7a491d0d1b31a6d90"},"name":"Miel","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e618e1e93f6eed1df649376"},"name":"Azitomicina","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e618e4093f6eed1df649377"},"name":"Piromicina","__v":{"$numberInt":"0"}}
