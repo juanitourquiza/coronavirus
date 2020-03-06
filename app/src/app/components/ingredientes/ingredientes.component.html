@@ -12,13 +12,14 @@
         <tr>
           <td>{{ ingrediente.name }}</td>
           <td><button class="btn btn-outline-primary btn-sm"
-              (click)="medicamentoDetails(medicamento._id)">Detalle</button>&nbsp;
-            <a class="btn btn-outline-primary btn-sm" (click)="medicamentoDelete(medicamento._id)">Borrar</a>&nbsp;
+              (click)="ingredienteDetails(ingrediente._id)">Detalle</button>&nbsp;
+            <a class="btn btn-outline-primary btn-sm" (click)="ingredienteDelete(ingrediente._id)">Borrar</a>&nbsp;
             <button class="btn btn-outline-primary btn-sm"
-              (click)="medicamentoUpdate(medicamento._id)">Actualizar</button>
+              (click)="ingredienteUpdate(ingrediente._id)">Actualizar</button>
           </td>
         </tr>
       </ng-container>
     </tbody>
   </table>
+  <a class="nav-link" [routerLink]="[ '/crear-ingrediente' ]">Crear Ingrediente</a>
 </div>

@@ -1,0 +1,12 @@
+<div class="container mt-5">
+    <h2>Crear Nuevo Ingrediente</h2>
+    <span class="small">Todos los campos son obligatorios</span>
+    <form #ingredienteForm="ngForm" (ngSubmit)="onSubmit(ingredienteForm)">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="ingrediente.name" required>
+
+        </div>
+        <input type="submit" class="btn btn-primary" value="Enviar" [disabled]="!ingredienteForm.form.valid">
+    </form>
+</div>

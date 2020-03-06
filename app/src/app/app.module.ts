@@ -12,6 +12,9 @@ import { DetallemedicamentoComponent } from "./components/detallemedicamento/det
 import { DetalleingredienteComponent } from "./components/detalleingrediente/detalleingrediente.component";
 import { CrearmedicamentoComponent } from './components/crearmedicamento/crearmedicamento.component';
 import { EditarmedicamentoComponent } from './components/editarmedicamento/editarmedicamento.component';
+import { CrearingredienteComponent } from './components/crearingrediente/crearingrediente.component';
+import { EditaringredienteComponent } from './components/editaringrediente/editaringrediente.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { EditarmedicamentoComponent } from './components/editarmedicamento/edita
     DetallemedicamentoComponent,
     DetalleingredienteComponent,
     CrearmedicamentoComponent,
-    EditarmedicamentoComponent
+    EditarmedicamentoComponent,
+    CrearingredienteComponent,
+    EditaringredienteComponent,
+    FilterPipe
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

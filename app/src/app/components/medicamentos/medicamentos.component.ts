@@ -9,6 +9,7 @@ import { Medicamento } from "../../models/medicamento";
   styleUrls: ["./medicamentos.component.css"]
 })
 export class MedicamentosComponent implements OnInit {
+  filterMedicamentos = "";
   constructor(private reqresService: ReqresService, private router: Router) {
     this.getMedicamentos();
   }

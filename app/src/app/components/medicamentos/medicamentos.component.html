@@ -1,6 +1,10 @@
 <div class="container mt-5">
-
-  <table class="table table-striped">
+  <form>
+    <input class="form-control" type="text" placeholder="Busqueda por Nombre" aria-label="Busqueda por Nombre"
+      name="filterMedicamentos" [(ngModel)]="filterMedicamentos">
+    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button> -->
+  </form>
+  <table class="table table-striped mt-5">
     <thead>
       <tr>
         <th scope="col">Nombre</th>
@@ -11,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <ng-container *ngFor="let medicamento of medicamentos">
+      <ng-container *ngFor="let medicamento of medicamentos | filter: filterMedicamentos">
         <tr>
           <td>{{ medicamento.name }}</td>
           <td>{{ medicamento.posologia }}</td>

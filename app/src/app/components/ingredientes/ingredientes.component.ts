@@ -3,9 +3,9 @@ import { ReqresService } from "../../services/reqres.service";
 import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-ingredientes',
-  templateUrl: './ingredientes.component.html',
-  styleUrls: ['./ingredientes.component.css']
+  selector: "app-ingredientes",
+  templateUrl: "./ingredientes.component.html",
+  styleUrls: ["./ingredientes.component.css"]
 })
 export class IngredientesComponent implements OnInit {
   constructor(private reqresService: ReqresService, private router: Router) {
@@ -25,9 +25,27 @@ export class IngredientesComponent implements OnInit {
     );
   }
 
-  //userDetails(id: number) {
-  //this.router.navigate(["user", id]);
-  //}
+  ingredienteDetails(id: number) {
+    //console.log("User id: ", id);
+    this.router.navigate(["detalle-ingrediente", id]);
+  }
+
+  ingredienteDelete(id: number) {
+    this.reqresService.deleteIngredientes(id).subscribe(
+      response => {
+        //console.log(response);
+        this.router.navigate(["home"]);
+      },
+      error => {
+        console.log(<any>error);
+      }
+    );
+  }
+
+  ingredienteUpdate(id: number) {
+    //console.log("User id: ", id);
+    this.router.navigate(["actualizar-ingrediente", id]);
+  }
 
   ngOnInit() {}
 }

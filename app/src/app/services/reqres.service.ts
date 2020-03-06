@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Medicamento } from "../models/medicamento";
+import { Ingrediente } from "../models/ingrediente";
 
 @Injectable({
   providedIn: "root"
@@ -39,6 +40,16 @@ export class ReqresService {
     );
   }
 
+  saveIngredientes(ingrediente: Ingrediente) {
+    let params = JSON.stringify(ingrediente);
+    let headers = new HttpHeaders().set("Content-Type", "application/json");
+    return this.http.post(
+      "http://localhost:3700/api/save-ingredientes",
+      params,
+      { headers: headers }
+    );
+  }
+
   updateMedicamentos(medicamento: Medicamento) {
     let params = JSON.stringify(medicamento);
     //console.log(medicamento._id);
@@ -52,9 +63,29 @@ export class ReqresService {
     );
   }
 
+  updateIngredientes(ingrediente: Ingrediente) {
+    let params = JSON.stringify(ingrediente);
+    //console.log(medicamento._id);
+    let headers = new HttpHeaders().set("Content-Type", "application/json");
+    return this.http.put(
+      `http://localhost:3700/api/ingrediente/${ingrediente._id}`,
+      params,
+      {
+        headers: headers
+      }
+    );
+  }
+
   deleteMedicamentos(id: number) {
     let headers = new HttpHeaders().set("Content-Type", "application/json");
     return this.http.delete(`http://localhost:3700/api/medicamento/${id}`, {
+      headers: headers
+    });
+  }
+
+  deleteIngredientes(id: number) {
+    let headers = new HttpHeaders().set("Content-Type", "application/json");
+    return this.http.delete(`http://localhost:3700/api/ingrediente/${id}`, {
       headers: headers
     });
   }
