@@ -7,6 +7,7 @@ var app = express();
 
 //cargar archivos rutas
 var ingredientesRoutes = require("./routes/ingredientes");
+var medicamentosRoutes = require("./routes/medicamentos");
 
 //middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -16,6 +17,7 @@ app.use(bodyParser.json());
 
 //rutas
 app.use("/api", ingredientesRoutes);
+app.use("/api", medicamentosRoutes);
 
 // app.get("/test", (req, res) => {
 //   res.status(200).send({
