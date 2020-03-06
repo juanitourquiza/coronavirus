@@ -9,15 +9,15 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./detallemedicamento.component.css"]
 })
 export class DetallemedicamentoComponent implements OnInit {
-  ingrediente: any;
+  medicamento: any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private reqresService: ReqresService
   ) {
     this.activatedRoute.params.subscribe(params => {
-      this.ingrediente = reqresService
-        .getIngrediente(params["id"])
-        .subscribe((res: any) => (this.ingrediente = res.ingrediente));
+      this.medicamento = reqresService
+        .getMedicamento(params["id"])
+        .subscribe((res: any) => (this.medicamento = res.medicamento));
     });
   }
 
