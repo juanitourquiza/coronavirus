@@ -1,0 +1,16 @@
+<div class="container m-5">
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-4" style="text-align: center;">
+                    <h5 class="card-title">{{ medicamento.name }}</h5>
+                </div>
+                <div class="col-8">
+                    <p class="card-text">{{ medicamento.posologia }}</p>
+                    <p class="card-text">{{ medicamento.fecha | date }}</p>
+                    <a [routerLink]="['/medicamentos']" class="btn btn-primary">Medicamentos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h2>Actualizar Medicamento</h2>
+    <span class="small">Todos los campos son obligatorios</span>
+    <form #medicamentoForm="ngForm" (ngSubmit)="onSubmit(medicamentoForm)">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="medicamento.name" required>
+
+        </div>
+        <div class="form-group">
+            <label>Posologia</label>
+            <input type="text" class="form-control" name="posologia" #posologia="ngModel"
+                [(ngModel)]="medicamento.posologia" required>
+        </div>
+        <div class="form-group">
+            <label>Ingredientes</label>
+            <input type="text" class="form-control" name="ingredientes" #ingredientes="ngModel"
+                [(ngModel)]="medicamento.ingredientes" required>
+        </div>
+        <div class="form-group">
+            <label>Fecha</label>
+            <input type="text" class="form-control" name="fecha" #fecha="ngModel" [(ngModel)]="medicamento.fecha"
+                required>
+        </div>
+        <!-- <p>
+            <label>Fecha</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="medicamento.name">
+        </p> -->
+        <input type="submit" class="btn btn-primary" value="Enviar" [disabled]="!medicamentoForm.form.valid">
+    </form>
+</div>

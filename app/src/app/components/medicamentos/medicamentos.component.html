@@ -1,1 +1,31 @@
-<p>medicamentos works!</p>
+<div class="container mt-5">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Posologia</th>
+        <th scope="col">Ingredientes</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let medicamento of medicamentos">
+        <tr>
+          <td>{{ medicamento.name }}</td>
+          <td>{{ medicamento.posologia }}</td>
+          <td>{{ medicamento.ingredientes }}</td>
+          <td>{{ medicamento.fecha | date }}</td>
+          <td><button class="btn btn-outline-primary btn-sm"
+              (click)="medicamentoDetails(medicamento._id)">Detalle</button>&nbsp;
+            <a class="btn btn-outline-primary btn-sm" (click)="medicamentoDelete(medicamento._id)">Borrar</a>&nbsp;
+            <button class="btn btn-outline-primary btn-sm"
+              (click)="medicamentoUpdate(medicamento._id)">Actualizar</button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  <a class="nav-link" [routerLink]="[ '/crear-medicamento' ]">Crear Medicamentos</a>
+</div>

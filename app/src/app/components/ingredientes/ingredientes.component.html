@@ -1,1 +1,24 @@
-<p>ingredientes works!</p>
+<div class="container mt-5">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let ingrediente of ingredientes">
+        <tr>
+          <td>{{ ingrediente.name }}</td>
+          <td><button class="btn btn-outline-primary btn-sm"
+              (click)="medicamentoDetails(medicamento._id)">Detalle</button>&nbsp;
+            <a class="btn btn-outline-primary btn-sm" (click)="medicamentoDelete(medicamento._id)">Borrar</a>&nbsp;
+            <button class="btn btn-outline-primary btn-sm"
+              (click)="medicamentoUpdate(medicamento._id)">Actualizar</button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
