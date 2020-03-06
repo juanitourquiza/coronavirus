@@ -1,0 +1,8 @@
+{"_id":{"$oid":"5e626a1ded7ad80fb551ae62"},"name":"Se puede todo","posologia":"nueva","ingredientes":"uno, dos, tres","fecha":{"$date":{"$numberLong":"1581292800000"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e62819239291a26797fcd8a"},"name":"Nuevo1","posologia":"nueva","ingredientes":"uno, dos, tres","fecha":{"$date":{"$numberLong":"1581292800000"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e62819639291a26797fcd8b"},"name":"Nuevo2","posologia":"nueva","ingredientes":"uno, dos, tres","fecha":{"$date":{"$numberLong":"1581292800000"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e62819939291a26797fcd8c"},"name":"Nuevo3","posologia":"nueva","ingredientes":"uno, dos, tres","fecha":{"$date":{"$numberLong":"1581292800000"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e62819c39291a26797fcd8d"},"name":"Nuevo4","posologia":"nueva","ingredientes":"uno, dos, tres","fecha":{"$date":{"$numberLong":"1581292800000"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e62819e39291a26797fcd8e"},"name":"Nuevo5","posologia":"nueva","ingredientes":"uno, dos, tres","fecha":{"$date":{"$numberLong":"1581292800000"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e62af25ef13ed34b45930b4"},"name":"Vensima","posologia":"Todas las cosas","ingredientes":"uno, tres, cuatro","fecha":{"$date":{"$numberLong":"1583525663033"}},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5e62b136d9c6aa3b4f763aa1"},"name":"Ose","posologia":"Todas las cosas","ingredientes":"uno, tres, cuatro","fecha":{"$date":{"$numberLong":"1583526187055"}},"__v":{"$numberInt":"0"}}
